@@ -1,1 +1,53 @@
 echo "Welcome to Address Book System Database"
+
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| payroll_service    |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.04 sec)
+
+mysql> create database Addrss_Book_service_DB;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++------------------------+
+| Database               |
++------------------------+
+| addrss_book_service_db |
+| information_schema     |
+| mysql                  |
+| payroll_service        |
+| performance_schema     |
+| sakila                 |
+| sys                    |
+| world                  |
++------------------------+
+8 rows in set (0.01 sec)
+
+mysql> use Addrss_Book_service_DB;
+Database changed
+mysql> show databases;
++------------------------+
+| Database               |
++------------------------+
+| addrss_book_service_db |
+| information_schema     |
+| mysql                  |
+| payroll_service        |
+| performance_schema     |
+| sakila                 |
+| sys                    |
+| world                  |
++------------------------+
+8 rows in set (0.00 sec)
+-------------------------------------------------------------------
