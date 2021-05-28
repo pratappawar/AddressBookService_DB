@@ -50,4 +50,34 @@ mysql> show databases;
 | world                  |
 +------------------------+
 8 rows in set (0.00 sec)
--------------------------------------------------------------------
+-------------------------------------------------------------------------------
+UC2: create table in database
+
+mysql> create table addressbook
+    -> (
+    -> first_name varchar(30) not null,
+    -> last_name varchar(30) not null,
+    -> address varchar(100) not null,
+    -> city varchar(30) not null,
+    -> state varchar(30) not null,
+    -> zip integer not null,
+    -> phone_number integer not null,
+    -> email varchar(30) not null
+    -> );
+
+mysql> describe addressbook;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| first_name   | varchar(30)  | NO   |     | NULL    |       |
+| last_name    | varchar(30)  | NO   |     | NULL    |       |
+| address      | varchar(100) | NO   |     | NULL    |       |
+| city         | varchar(30)  | NO   |     | NULL    |       |
+| state        | varchar(30)  | NO   |     | NULL    |       |
+| zip          | int          | NO   |     | NULL    |       |
+| phone_number | int          | NO   |     | NULL    |       |
+| email        | varchar(30)  | NO   |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+----------------------------------------------------------------------------------
