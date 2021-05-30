@@ -80,4 +80,23 @@ mysql> describe addressbook;
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
 
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+
+#UC3: insert new Contacts to AddressBook
+
+mysql> insert into AddressBook (first_name,last_name,address,city,state,zip,phone_number,email) values
+    ->      ('Pratap','Pawar','Deccan','Pune','maharashtra',410052,9836856,'pratappawar@gmail.com'),
+    ->       ('Amar','Pawar','Karvenagar','Mumbai','maharashtra',410055,9426856,'Amar@gmail.com'),
+    ->       ('Akbar','Pathan','Shivaji nagar','Pune','maharashtra',414545,9806856,'Akbar@gmail.com');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select *from AddressBook;
++------------+-----------+---------------+--------+-------------+--------+--------------+-----------------------+
+| first_name | last_name | address       | city   | state       | zip    | phone_number | email                 |
++------------+-----------+---------------+--------+-------------+--------+--------------+-----------------------+
+| Pratap     | Pawar     | Deccan        | Pune   | maharashtra | 410052 |      9836856 | pratappawar@gmail.com |
+| Amar       | Pawar     | Karvenagar    | Mumbai | maharashtra | 410055 |      9426856 | Amar@gmail.com        |
+| Akbar      | Pathan    | Shivaji nagar | Pune   | maharashtra | 414545 |      9806856 | Akbar@gmail.com       |
++------------+-----------+---------------+--------+-------------+--------+--------------+-----------------------+
+3 rows in set (0.00 sec)
