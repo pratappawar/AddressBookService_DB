@@ -159,3 +159,16 @@ mysql> select * from AddressBook where city='Mumbai' and State='maharashtra';
 1 row in set (0.00 sec)
 
 ----------------------------------------------------------------------------------------------------------------------
+
+#UC7: Ability to understand the size of address book by City and State
+
+
+mysql> select count(city),count(state) from AddressBook;
++-------------+--------------+
+| count(city) | count(state) |
++-------------+--------------+
+|           2 |            2 |
++-------------+--------------+
+1 row in set (0.01 sec)
+
+------------------------------------------------------------------------------------------------------------------------
