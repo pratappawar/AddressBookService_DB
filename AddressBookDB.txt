@@ -139,3 +139,23 @@ mysql> select * from AddressBook;
 --------------------------------------------------------------------------------------------------------------------
 
 
+#UC6: Ability to Retrieve Person belonging to a City or State from the Address Book
+
+mysql> select * from AddressBook where city='Mumbai' or State='maharashtra';
++------------+-----------+------------+--------+-------------+--------+--------------+-----------------------+
+| first_name | last_name | address    | city   | state       | zip    | phone_number | email                 |
++------------+-----------+------------+--------+-------------+--------+--------------+-----------------------+
+| Pratap     | Pawar     | Deccan     | Pune   | maharashtra | 410052 |      9836856 | pratappawar@gmail.com |
+| Amar       | Kokate    | Karvenagar | Mumbai | maharashtra | 410055 |      9426856 | Amar@gmail.com        |
++------------+-----------+------------+--------+-------------+--------+--------------+-----------------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from AddressBook where city='Mumbai' and State='maharashtra';
++------------+-----------+------------+--------+-------------+--------+--------------+----------------+
+| first_name | last_name | address    | city   | state       | zip    | phone_number | email          |
++------------+-----------+------------+--------+-------------+--------+--------------+----------------+
+| Amar       | Kokate    | Karvenagar | Mumbai | maharashtra | 410055 |      9426856 | Amar@gmail.com |
++------------+-----------+------------+--------+-------------+--------+--------------+----------------+
+1 row in set (0.00 sec)
+
+----------------------------------------------------------------------------------------------------------------------
